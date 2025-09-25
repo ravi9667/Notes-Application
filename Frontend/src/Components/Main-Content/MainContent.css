@@ -1,0 +1,23 @@
+.mainContent-container {
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    padding: 20px 25px;
+    width: 80%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+}
+.mainContent-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.notes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
