@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import './mainHeader.css';
 import AddNote from "../../AddNotes/AddNotes";
 
-function MainHeader({ notesList, setNotesList, selectedCategory }) {
+function MainHeader({ notesList, setNotesList, selectedCategory, handleAddNote  }) {
 
-    if(selectedCategory === "/All Notes") {
+    if(selectedCategory === "All Notes") {
         selectedCategory = ""
+    } else {
+        selectedCategory = `/${selectedCategory}`
     }
     const [showAddNote, setShowAddNote] = useState(false);
 
@@ -24,6 +26,7 @@ function MainHeader({ notesList, setNotesList, selectedCategory }) {
                     closeAddNote={() => setShowAddNote(false)}
                     notesList={notesList}
                     setNotesList={setNotesList}
+                    handleAddNote={handleAddNote}
                 />
             )}
         </div>
