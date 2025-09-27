@@ -22,9 +22,7 @@ function Card({ title, note, createdAt, _id, handleDeleteNote }) {
             </div>
             <div className="text-bottom">
                 <p className="card-createdAt">{formattedDate}</p>
-                <button className="delete-btn" onClick={() => handleDeleteNote(_id)}>
-                    <img src={DeleteIcon} alt="Delete" width={20} height={20} />
-                </button>
+                <img className="delete-btn" src={DeleteIcon} onClick={() => handleDeleteNote(_id)} alt="Delete" width={20} height={20} />
             </div>
         </div>
     );
