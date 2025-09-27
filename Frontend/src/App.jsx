@@ -26,7 +26,7 @@ function App() {
 
     useEffect(() => {
         fetchNotes();
-    }, []);
+    }, [notesList, selectedCategory]);
 
     // Add a new note
     async function handleAddNote(noteData) {
@@ -40,7 +40,8 @@ function App() {
             });
 
             const result = await response.json();
-            alert(result?.message || "Note added");
+            console.log(result)
+            alert(result?.message);
 
             // Add to current list
             setNotesList(prev => [...prev, result]);
@@ -66,7 +67,6 @@ function App() {
                 setNotesList(prevNotes => {
                     const updated = prevNotes.filter(note => note._id !== _id);
 
-                    // Handle case when no notes left in selected category
                     const remainingInCategory = updated.filter(note => 
                         selectedCategory === "All Notes" || note.category === selectedCategory
                     );
