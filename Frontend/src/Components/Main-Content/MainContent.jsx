@@ -14,6 +14,7 @@ const MainContent = ({ notesList, selectedCategory, handleAddNote, handleDeleteN
             <div className="notes-section">
                 <MainHeader
                     handleAddNote={handleAddNote}
+                    selectedCategory={selectedCategory}
                 />
                 <div className="card-container">
                     {filteredNotes.map((card) => (
