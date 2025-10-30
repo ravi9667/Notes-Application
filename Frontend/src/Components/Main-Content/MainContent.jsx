@@ -1,7 +1,7 @@
 import React from "react";
-import './mainContent.css';
-import MainHeader from "./Main-header/MainHeader";
-import Card from "../Card/Card";
+import MainHeader from "./Main-header/MainHeader"
+import Card from "../Card/Card"
+import './MainContent.css';
 
 const MainContent = ({ notesList, selectedCategory, handleAddNote, handleDeleteNote }) => {
     const filteredNotes = notesList.filter(note => {
@@ -17,7 +17,7 @@ const MainContent = ({ notesList, selectedCategory, handleAddNote, handleDeleteN
                     selectedCategory={selectedCategory}
                 />
                 <div className="card-container">
-                    {filteredNotes.map((card) => (
+                    {filteredNotes.map((card, idx) => (
                         <Card
                             key={card._id}
                             _id={card._id}
