@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./App.css";
 import SideBar from './Components/SideBar/SideBar';
-import MainContent from './Components/Main-Content/MainContent';
+import MainContent from './Components/MainContent/MainContent';
 
 function App() {
     const [notesList, setNotesList] = useState([]);
